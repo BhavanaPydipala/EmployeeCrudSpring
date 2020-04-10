@@ -6,16 +6,14 @@ import com.cap.anurag.entity.Employee;
 
 public interface EmployeeDao {
 	
-	public void save(Employee emp) ;
+	Employee createEmployee(Employee emp);
 	
 	public Employee findById(Integer empId);
 	
 	public Employee updateEmp(Employee emp);
 	
-	public Employee deleteEmp(Integer empId);
+	public List<Employee> deleteEmp(Integer empId);
 	
-	List<Employee> findAllEmployees();
+	List<Object> findAllEmployees();
 	
 }
-
-

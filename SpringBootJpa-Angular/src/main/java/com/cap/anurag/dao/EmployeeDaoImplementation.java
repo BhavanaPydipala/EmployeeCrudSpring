@@ -36,7 +36,7 @@ public class EmployeeDaoImplementation implements EmployeeDao{
 		return e;
 	}
 
-	public Employee deleteEmp(Integer empId) {
+	public List<Employee> deleteEmp(Integer empId) {
 		Employee e2=entitymanager.find(Employee.class,empId);
 		entitymanager.remove(e2);
 		return null;
@@ -63,17 +63,15 @@ public class EmployeeDaoImplementation implements EmployeeDao{
 
 	}
 
-	@Override
-	public void save(Employee emp) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
+	
     @SuppressWarnings("unchecked")
 	@Override
-	public List<Employee> findAllEmployees() {
+	public List<Object> findAllEmployees() {
 		// TODO Auto-generated method stub
-		Query q=entitymanager.createQuery("from Employee");
-		List<Employee> list=q.getResultList();
+		Query q=entitymanager.createQuery("select e from Employee e");
+		List<Object> list=q.getResultList();
 		return list;
 	}
 

@@ -2,7 +2,6 @@ package com.cap.anurag.service;
 
 import java.util.List;
 
-
 import com.cap.anurag.entity.Employee;
 
 public interface EmployeeService {
@@ -11,11 +10,14 @@ public interface EmployeeService {
     
 	Employee findEmployee(Integer empId);
     
-	List<Employee> findAllEmployees();
+
     
 	Employee updateEmployee(Employee emp);
 	
-	Employee deleteEmpById(Integer empId);
+	
+
+	List<Object> findAllEmployees();
+
+	List<Employee> deleteEmpById(Integer empId);
 	
 	}
-

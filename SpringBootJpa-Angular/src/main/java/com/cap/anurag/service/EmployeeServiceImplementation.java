@@ -18,7 +18,8 @@ EmployeeDaoImplementation  empDao;
 public Employee createEmployee(Employee emp)
 {
 	return empDao.createEmployee(emp);
-		
+	
+	
 }
 public Employee findEmployee(Integer empId)
 {
@@ -29,12 +30,19 @@ public  Employee updateEmployee(Employee emp){
 	return empDao.updateEmp(emp);
 	
 }
-public Employee deleteEmpById(Integer empId) {
+
+
+
+
+
+
+
+public List<Employee> deleteEmpById(Integer empId) {
 	return empDao.deleteEmp(empId);
 	
 	}
 @Override
-public List<Employee> findAllEmployees() {
+public List<Object> findAllEmployees() {
 	// TODO Auto-generated method stub
 	return empDao.findAllEmployees();
 }
